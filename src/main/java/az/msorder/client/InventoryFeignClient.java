@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 )
 public interface InventoryFeignClient {
 
-    @GetMapping("/api/inventory/{productId}")
-    GetProductDto getProductById(@PathVariable Long productId);
-
-    @PutMapping("/api/inventory/{productId}/reduce")
+    @PutMapping("/api/inventories/{productId}/reduce")
     GetProductDto reduceQuantity(@PathVariable Long productId,
                                  @RequestParam int quantity);
+
+    @GetMapping("/api/inventories/{productId}")
+    GetProductDto getProductById(@PathVariable Long productId);
 }

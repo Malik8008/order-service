@@ -1,8 +1,10 @@
 package az.msorder.dto.productDto;
 
-public record GetProductDto(
-        Long id,
-        String name,
-        int quantity
-) {
+import lombok.Data;
+
+@Data
+public class GetProductDto {
+    Long id;
+    String name;
+    int quantity;
 }

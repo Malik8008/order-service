@@ -44,6 +44,7 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     //RabbitMq
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
 }
 
 dependencyManagement {
