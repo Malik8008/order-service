@@ -31,7 +31,7 @@ public class OrderServiceImpl implements OrderService {
 
         try {
             inventoryFeignClient.reduceQuantity(dto.productId(), dto.quantity());
-        } catch (FeignException.BadRequest ex) {
+        } catch (FeignException ex) {
             throw new NoEnoughException("Not enough stock");
         }
 
