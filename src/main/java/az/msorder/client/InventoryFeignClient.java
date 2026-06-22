@@ -17,6 +17,10 @@ public interface InventoryFeignClient {
     GetProductDto reduceQuantity(@PathVariable Long productId,
                                  @RequestParam int quantity);
 
+    @PutMapping("/api/inventories/{productId}/increase")
+    GetProductDto increaseQuantity(@PathVariable Long productId,
+                                 @RequestParam int quantity);
+
     @GetMapping("/api/inventories/{productId}")
     GetProductDto getProductById(@PathVariable Long productId);
 }

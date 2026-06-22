@@ -36,15 +36,18 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     //modelMapper
     implementation 'org.modelmapper:modelmapper:3.2.2'
-    //H2Dialect
-    implementation 'org.springframework.boot:spring-boot-h2console'
-    implementation 'org.springframework.boot:spring-boot-starter'
-    runtimeOnly 'com.h2database:h2'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//    //H2Dialect
+//    implementation 'org.springframework.boot:spring-boot-h2console'
+//    implementation 'org.springframework.boot:spring-boot-starter'
+//    runtimeOnly 'com.h2database:h2'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     //RabbitMq
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
+    // Swagger/OpenAPI & Validation
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
 dependencyManagement {

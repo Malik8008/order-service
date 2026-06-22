@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: ms-order
+    restart: always
+    environment:
+      POSTGRES_USER: order
+      POSTGRES_PASSWORD: 200125
+      POSTGRES_DB: msorder
+    ports:
+      - "5445:5432"
+    volumes:
+      - ms-order_data:/var/lib/postgresql/data
+
+volumes:
+  ms-order_data:

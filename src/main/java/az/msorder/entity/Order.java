@@ -3,6 +3,9 @@ package az.msorder.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDateTime;
 
@@ -21,5 +24,8 @@ public class Order {
     int quantity;
     String status;
     Boolean isDeleted;
+    @CreationTimestamp
     LocalDateTime createdAt;
+    @UpdateTimestamp
+    LocalDateTime updatedAT;
 }

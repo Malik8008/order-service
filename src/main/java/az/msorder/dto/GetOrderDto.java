@@ -10,4 +10,5 @@ public class GetOrderDto {
     int quantity;
     String status;
     LocalDateTime createdAt;
+    LocalDateTime updatedAt;
 }
